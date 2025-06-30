@@ -1,5 +1,6 @@
 -- Task 1: DDL for actors table
--- This table stores dimensional data for actors with their films and quality metrics
+-- This table stores dimensional data for actors with their films and quality
+-- metrics
 
 DROP TYPE IF EXISTS film_struct CASCADE;
 CREATE TYPE film_struct AS (
@@ -19,5 +20,5 @@ CREATE TABLE actors (
     actorid text PRIMARY KEY,
     films film_struct [] NOT NULL,
     quality_class quality_class_enum NOT NULL,
-    last_active_year integer NOT NULL
+    is_active boolean NOT NULL
 );
