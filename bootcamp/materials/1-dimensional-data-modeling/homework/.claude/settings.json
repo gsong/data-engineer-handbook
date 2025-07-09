@@ -8,7 +8,5 @@
     ]
   },
   "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": [
-    "postgres"
-  ]
+  "enabledMcpjsonServers": ["postgres"]
 }
