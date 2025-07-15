@@ -42,8 +42,8 @@ cd data-engineer-handbook/bootcamp/materials/1-dimensional-data-modeling
 
 #### 🧩 Option A: Local Installation (Manual Setup)
 
-1. Install PostgreSQL  
-   - [Mac – use Homebrew](https://brew.sh/)  
+1. Install PostgreSQL
+   - [Mac – use Homebrew](https://brew.sh/)
    - [Windows – official installer](https://www.postgresql.org/download/)
 
 2. Restore the sample database:
@@ -62,7 +62,7 @@ pg_restore -U [username] -d [db_name] -h [host] -p [port] data.dump
 
 #### 🐳 Option B: Docker (Simplest & Preferred)
 
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)  
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 2. Copy the env template:
 
 ```bash
@@ -99,16 +99,16 @@ Choose any GUI tool you like. Here’s how:
 
 #### 🌐 If using PGAdmin (via Docker browser)
 
-1. Go to [http://localhost:5050](http://localhost:5050)  
-2. Log in using the credentials from your `.env` file  
-3. Create a new server:  
-   - **Name**: Name of your choice  
-   - **Host**: `my-postgres-container`  
-   - **Port**: `5432`  
-   - **Database**: `postgres`  
-   - **Username**: `postgres`  
-   - **Password**: `postgres`  
-   - ✅ Save Password  
+1. Go to [http://localhost:5050](http://localhost:5050)
+2. Log in using the credentials from your `.env` file
+3. Create a new server:
+   - **Name**: Name of your choice
+   - **Host**: `my-postgres-container`
+   - **Port**: `5432`
+   - **Database**: `postgres`
+   - **Username**: `postgres`
+   - **Password**: `postgres`
+   - ✅ Save Password
 4. Click **Save** — and you’re connected!
 
 ---
@@ -116,12 +116,13 @@ Choose any GUI tool you like. Here’s how:
 #### 💻 If using a desktop client (like DataGrip, DBeaver, or VS Code)
 
 Use the following values to set up a new PostgreSQL connection:
-   - **Host**: `localhost`  
-   - **Port**: `5432`  
-   - **Database**: `postgres`  
-   - **Username**: `postgres`  
-   - **Password**: `postgres`  
-   - ✅ Save Password  
+
+- **Host**: `localhost`
+- **Port**: `5432`
+- **Database**: `postgres`
+- **Username**: `postgres`
+- **Password**: `postgres`
+- ✅ Save Password
 
 ✅ Test & Save your connection and you’re good to go.
 
@@ -263,14 +264,14 @@ make restart
 
 ## 🔧 Helpful Docker Make Commands
 
-| Command           | What it does                    |
-|------------------|----------------------------------|
-| `make up`        | Start Postgres and PGAdmin       |
-| `make stop`      | Stop both containers             |
-| `make restart`   | Restart the Postgres container   |
-| `make logs`      | View logs from containers        |
-| `make inspect`   | Inspect container configuration  |
-| `make ip`        | Get container IP address         |
+| Command        | What it does                    |
+| -------------- | ------------------------------- |
+| `make up`      | Start Postgres and PGAdmin      |
+| `make stop`    | Stop both containers            |
+| `make restart` | Restart the Postgres container  |
+| `make logs`    | View logs from containers       |
+| `make inspect` | Inspect container configuration |
+| `make ip`      | Get container IP address        |
 
 ---
 
