@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sqlfluff fix:*)",
+      "mcp__postgres__explain_query"
+    ],
+    "deny": []
+  }
+}
