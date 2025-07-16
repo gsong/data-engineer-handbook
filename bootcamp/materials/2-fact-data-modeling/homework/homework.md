@@ -11,7 +11,7 @@ Construct the following eight queries:
   - data type here should look similar to `MAP<STRING, ARRAY[DATE]>`
     - or you could have `browser_type` as a column with multiple rows for each user (either way works, just be consistent!)
 
-- [ ] A cumulative query to generate `device_activity_datelist` from `events`
+- [x] A cumulative query to generate `device_activity_datelist` from `events`
 
 - [ ] A `datelist_int` generation query. Convert the `device_activity_datelist` column into a `datelist_int` column
 
