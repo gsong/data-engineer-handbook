@@ -3,7 +3,7 @@ WITH yesterday AS (
         user_id,
         browser_type,
         device_activity_datelist,
-        date
+        date AS activity_date
     FROM user_devices_cumulated
     WHERE date = DATE('2023-01-01')
 ),
@@ -32,7 +32,7 @@ SELECT
             THEN ARRAY[t.today_date]
         ELSE ARRAY[]::date []
     END AS device_activity_datelist,
-    COALESCE(t.today_date, y.date + interval '1 day') AS date
+    COALESCE(t.today_date, y.activity_date + interval '1 day') AS date
 FROM yesterday AS y
 FULL OUTER JOIN today AS t
     ON y.user_id = t.user_id AND y.browser_type = t.browser_type;

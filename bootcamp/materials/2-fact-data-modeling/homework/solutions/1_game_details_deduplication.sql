@@ -1,5 +1,6 @@
 -- Query to deduplicate game_details from Day 1 (2016-01-01)
--- This query removes any potential duplicates based on the logical key (game_id, player_id)
+-- This query removes any potential duplicates based on the logical key
+-- (game_id, player_id)
 -- using ROW_NUMBER() to keep only the first occurrence
 
 WITH day1_game_details AS (
